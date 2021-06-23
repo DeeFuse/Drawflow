@@ -1,5 +1,6 @@
 module.exports = {
   entry: './src/drawflow.js',
+  devtool: 'source-map',
   output: {
     library: 'Drawflow',
     libraryTarget: 'umd',
