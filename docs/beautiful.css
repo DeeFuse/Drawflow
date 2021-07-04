@@ -90,7 +90,7 @@ cursor: pointer;
   font-weight: bold;
 }
 
-.btn-export {
+.btn-import {
   float: right;
   position: absolute;
   top: 10px;
@@ -105,11 +105,26 @@ cursor: pointer;
   z-index: 5;
 }
 
-.btn-clear {
+.btn-export {
   float: right;
   position: absolute;
   top: 10px;
   right: 85px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #0e5ba3;
+  background: #4ea9ff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.btn-clear {
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 160px;
   color: white;
   font-weight: bold;
   border: 1px solid #96015b;
@@ -195,7 +210,7 @@ cursor: pointer;
   -webkit-box-shadow: 0 2px 15px 2px var(--border-color);
   box-shadow: 0 2px 15px 2px var(--border-color);
   padding: 0px;
-  width: 200px;
+  /* width: 200px; */
 }
 
 .drawflow .drawflow-node.selected  {
@@ -226,7 +241,7 @@ cursor: pointer;
 }
 
 .drawflow .drawflow-node .output {
-  right: 10px;
+  right: -5px !important;
 }
 
 .drawflow .drawflow-node .input {
@@ -323,6 +338,25 @@ cursor: pointer;
   fill: #4ea9ff;
 }
 
+/* This aligns the input/content/output on top of the nodeHeader */
+.drawflow-node.collapsed-head .drawflow-node-header {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.drawflow-node.collapsed-head .title-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.drawflow-node.collapsed-head .outputs,
+.drawflow-node.collapsed-head .inputs {
+    display: grid;
+    align-items: center;
+    min-height: 50px;
+}
 
 /* Modal */
 .modal {
